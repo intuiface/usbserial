@@ -143,6 +143,7 @@ public class UsbSerial extends CordovaPlugin {
 					if (device == null) {
 						Log.d(TAG, "No device found!");
 						callbackContext.error("No device found!");
+						return;
 					}
 
 					// create the intent that will be used to get the permission

@@ -45,7 +45,10 @@ UsbSerial.prototype.open = function (opts, callback) {
     this._port = opts.port;
     this.requestPermission(
         opts,
-        function () {
+        function (error) {
+            if (error) {
+                return callback(error);
+            }
             exec(
                 function (result) {
                     callback(null, result);
@@ -57,10 +60,8 @@ UsbSerial.prototype.open = function (opts, callback) {
                 'openSerial',
                 [opts]
             );
-        },
-        function (error) {
-            callback(error);
-        });
+        }
+    );
 };
 
 UsbSerial.prototype.write = function (data, callback) {
