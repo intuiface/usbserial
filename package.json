@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "name": "com.intuilab.intuifaceplayer.usbserial",
+  "cordova_name": "UsbSerial",
+  "description": "UsbSerial.",
+  "license": "",
+  "keywords": [
+    "cordova",
+    "usbserial"
+  ],
+  "platforms": [
+    "android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=2.7.0"
+    }
+  ],
+  "englishdoc": "UsbSerial"
+}

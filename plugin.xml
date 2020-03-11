@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.intuilab.intuifaceplayer.usbserial"
+        version="1.0.0">
+    <name>UsbSerial</name>
+    <description>UsbSerial.</description>
+    <author>The IntuiLab team: Alexandre Wurtz</author>
+    <license>GNU Lesser General Public License v2.1</license>
+    <keywords>cordova,usbserial</keywords>
+
+    <engines>
+        <engine name="cordova-android" version=">=2.7.0"/>
+    </engines>
+
+    <js-module src="www/usbserial.js" name="UsbSerial">
+        <clobbers target="usbserial"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="UsbSerial">
+                <param name="android-package" value="com.intuilab.intuifaceplayer.usbserial.UsbSerial"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/UsbSerial.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial"/>
+        <source-file src="src/android/UsbSerialDevice.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial"/>
+        <source-file src="src/android/UsbBroadcastReceiver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial"/>
+
+        <source-file src="src/android/usbserial/driver/CdcAcmSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/Ch34xSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/CommonUsbSerialPort.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/Cp21xxSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/FtdiSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/ProbeTable.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/ProlificSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/UsbId.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/UsbSerialDriver.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/UsbSerialPort.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+        <source-file src="src/android/usbserial/driver/UsbSerialProber.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/driver"/>
+
+        <source-file src="src/android/usbserial/util/SerialInputOutputManager.java" target-dir="src/com/intuilab/intuifaceplayer/usbserial/util"/>
+    </platform>
+</plugin>
