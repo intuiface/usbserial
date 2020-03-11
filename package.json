@@ -3,7 +3,13 @@
   "name": "com.intuilab.intuifaceplayer.usbserial",
   "cordova_name": "UsbSerial",
   "description": "UsbSerial.",
-  "license": "",
+  "license": "GNU Lesser General Public License v2.1",
+  "cordova": {
+    "id": "com.intuilab.intuifaceplayer.usbserial",
+    "platforms": [
+      "android"
+    ]
+  },
   "keywords": [
     "cordova",
     "usbserial"
@@ -17,5 +23,9 @@
       "version": ">=2.7.0"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intuiface/usbserial.git"
+  },
   "englishdoc": "UsbSerial"
 }
