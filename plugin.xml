@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.intuilab.intuifaceplayer.usbserial"
-        version="1.0.0">
+        version="1.0.1">
     <name>UsbSerial</name>
     <description>UsbSerial.</description>
     <author>The IntuiLab team: Alexandre Wurtz</author>
